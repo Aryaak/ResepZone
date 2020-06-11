@@ -1,5 +1,3 @@
-import styling from "./styling";
-
 class SearchBar extends HTMLElement {
 
     connectedCallback() {
@@ -19,10 +17,9 @@ class SearchBar extends HTMLElement {
     render() {
 
         this.innerHTML = `
-        ${styling}
  
         <style>
- 
+
         .search {
 
             outline: none;
@@ -63,7 +60,7 @@ class SearchBar extends HTMLElement {
                         placeholder="Type recipe...">
                     <div class="input-group-append">
                         <button class="btn btn-outline-dark recipe searchRecipe" type="button" id="button-addon2">
-                            <i class="fas fa-search pr-1"></i>
+                        <i class="fas fa-search"></i>
                         </button>
                     </div>
                 </div>

@@ -1,24 +1,18 @@
-import styling from "./styling.js";
+import globalBootsrap from "./global-bootstarp";
 
 class FooterContent extends HTMLElement {
 
-    constructor() {
+    connectedCallback() {
 
-        super();
-        this.shadowDOM = this.attachShadow({
-            mode: "open"
-        }).innerHTML = `${this.render()}`
+        this.render()
     }
 
     render() {
 
-        return ` 
-        
-        ${styling};
+        this.innerHTML = `
+      
         <style>
-        
-    
-         
+
             .footer-item {
 
                 background: none;

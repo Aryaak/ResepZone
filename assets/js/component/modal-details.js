@@ -1,7 +1,5 @@
 class ModalDetails extends HTMLElement {
 
-
-
     set detailsRecipe(details) {
 
         this._detailsRecipe = details;

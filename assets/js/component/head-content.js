@@ -1,19 +1,21 @@
-import styling from "./styling.js";
+import globalBootstrap from "./global-bootstarp.js";
 
 class HeadContent extends HTMLElement {
 
-    constructor() {
-        super();
-        this.shadowDOM = this.attachShadow({
+    connectedCallback() {
+
+        this.attachShadow({
             mode: "open"
-        }).innerHTML = `${this.render()}`;
+        })
+
+        this.render();
     }
 
     render() {
 
-        return `
+        this.shadowRoot.innerHTML = `
 
-        ${styling};
+        ${globalBootstrap}
         
         <style>
  
